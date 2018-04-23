@@ -56,7 +56,15 @@ git show-branch --sha1-name my_new_feature master
 git checkout master
 git merge my_new_feature
 git log
+
+# Download a full repository
 git clone https://github.com/jima80525/github-playground.git
+
+# Download to the current computer the changes in an already present repository
+git pull https://github.com/architest/git-example
+
+# Upload the local changes to GitHub:
+git push https://github.com/architest/git-example master
 
 Simple git workflow:
 ====================
