@@ -1,61 +1,74 @@
+# Initialize a repository
 git init
+
+# See status
 git status
+
+# Add new file
 git add hello.py
 git status
+
+# Set user email and name
 git config --global user.email "dagoberto.salazar@gmail.com"
 git config --global user.name "Dagoberto Salazar"
+
+# Commit a change, with comment
 git commit -m "creating hello.py"
 git status
 git add hello.py myname.py
 git status
 git commit -m "added myname module"
-git status
 vim .gitignore
-git status
 git add .gitignore
 git commit -m "created .gitignore"
-git status
+
+# See a log of the changes
 git log
+
+# Checkout (use) the repository at an specific point in time (98011e69...)
 git checkout 98011e69fda0df3937e99e2d7ac11ca3a1e37959
-git status
-git log
+
+# Back to the top of the main branch (master)
 git checkout master
-git log
+
+# Make a change in '.gitignore' but then drop it
 vim .gitignore
-git status
 git checkout -- .gitignore
-git status
+
 vim .gitignore
 git status
 git add .gitignore
-git status
 git commit -m "modifying .gitignore to exclude all .pyc files"
-git status
-vim .gitignore
-git status
+
+# To create a new branch
 git checkout -b my_new_feature
-git status
-git log
+
+# To see all the branches
+git branch
+
+# Add a change in the NEW 'my_new_feature' branch
 git add hello.py
 git status
 git commit -m "added code for feature x"
-git status
-git log
+
+# Get back to the top of the master branch
 git checkout master
-git log
+
+# Compare the state of two branches
 git show-branch my_new_feature master
 git checkout my_new_feature
-git log
 git checkout master
-git log
 git show-branch my_new_feature
 git show-branch master
+
+# 'HEAD' is where the repository is currently pointing to
 git show-branch HEAD
-git status
+
 git show-branch --sha1-name my_new_feature master
+
+# Go back to 'master' and MERGE changes from 'my_new_feature' to 'master'
 git checkout master
 git merge my_new_feature
-git log
 
 # Download a full repository
 git clone https://github.com/jima80525/github-playground.git
