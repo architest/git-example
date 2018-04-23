@@ -25,3 +25,9 @@ Instructions to use vim-fugitive
 # As well as:
 :Gstatus
 
+# And, to upload things to the server:
+:Git push origin master
+
+# Additional, valuable information may be found at:
+http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
+
