@@ -41,6 +41,9 @@ git add .gitignore
 git commit -m "modifying .gitignore to exclude all .pyc files"
 
 # To create a new branch
+git checkout my_new_feature
+
+# To create a new branch AND MOVE THERE
 git checkout -b my_new_feature
 
 # To see all the branches
@@ -70,6 +73,15 @@ git show-branch --sha1-name my_new_feature master
 git checkout master
 git merge my_new_feature
 
+# Removing a branch which is no longer needed
+git branch -d <branch-name>
+
+# Removing files (wildcards are also valid)
+git rm <target-file>
+
+# Removing directories
+git rm -r folder_of_cats
+
 # Download a full repository
 git clone https://github.com/jima80525/github-playground.git
 
@@ -82,14 +94,37 @@ git push https://github.com/architest/git-example master
 # 'origin' is an alias for server repository (if we started by cloning a repo)
 git push origin master
 
+# The same, but the '-u' option tell Git to remember the parameters, so
+# afterwards we only need to write 'git push'
+git push -u origin master
+
+# Pulling, but in a more compact way
+git pull origin master
+
+# Add a remote repository to push our local repo to the GitHub server
+git remote add origin https://github.com/try-git/try_git.git
+
+# Take a look at what is different from our last commit. In this case we want
+# the diff of our most recent commit, we can refer to it using HEAD
+git diff HEAD
+
+# We can unstage files by using the 'git reset' command
+git reset octofamily/octodog.txt
+
+# Files can be changed back to how they were at last commit by using command
+git checkout -- <target>
+
 
 Simple git workflow:
 ====================
 
 1. git status – Make sure your current area is clean.
-2. git pull – Get the latest version from the remote. This saves merging issues later.
-3. Edit your files and make your changes. Remember to run your linter and do unit tests!
-4. git status – Find all files that are changed. Make sure to watch untracked files too!
+2. git pull – Get the latest version from the remote. This saves merging
+   issues later.
+3. Edit your files and make your changes. Remember to run your linter and do
+   unit tests!
+4. git status – Find all files that are changed. Make sure to watch untracked
+   files too!
 5. git add [files] – Add the changed files to the staging area.
 6. git commit -m "message" – Make your new commit.
 7. git push origin [branch-name] – Push your changes up to the remote.
