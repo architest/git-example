@@ -79,6 +79,10 @@ git pull https://github.com/architest/git-example
 # Upload the local changes to GitHub:
 git push https://github.com/architest/git-example master
 
+# 'origin' is an alias for server repository (if we started by cloning a repo)
+git push origin master
+
+
 Simple git workflow:
 ====================
 
