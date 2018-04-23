@@ -1,0 +1,70 @@
+git init
+git status
+git add hello.py
+git status
+git config --global user.email "dagoberto.salazar@gmail.com"
+git config --global user.name "Dagoberto Salazar"
+git commit -m "creating hello.py"
+git status
+git add hello.py myname.py
+git status
+git commit -m "added myname module"
+git status
+vim .gitignore
+git status
+git add .gitignore
+git commit -m "created .gitignore"
+git status
+git log
+git checkout 98011e69fda0df3937e99e2d7ac11ca3a1e37959
+git status
+git log
+git checkout master
+git log
+vim .gitignore
+git status
+git checkout -- .gitignore
+git status
+vim .gitignore
+git status
+git add .gitignore
+git status
+git commit -m "modifying .gitignore to exclude all .pyc files"
+git status
+vim .gitignore
+git status
+git checkout -b my_new_feature
+git status
+git log
+git add hello.py
+git status
+git commit -m "added code for feature x"
+git status
+git log
+git checkout master
+git log
+git show-branch my_new_feature master
+git checkout my_new_feature
+git log
+git checkout master
+git log
+git show-branch my_new_feature
+git show-branch master
+git show-branch HEAD
+git status
+git show-branch --sha1-name my_new_feature master
+git checkout master
+git merge my_new_feature
+git log
+git clone https://github.com/jima80525/github-playground.git
+
+Simple git workflow:
+====================
+
+1. git status – Make sure your current area is clean.
+2. git pull – Get the latest version from the remote. This saves merging issues later.
+3. Edit your files and make your changes. Remember to run your linter and do unit tests!
+4. git status – Find all files that are changed. Make sure to watch untracked files too!
+5. git add [files] – Add the changed files to the staging area.
+6. git commit -m "message" – Make your new commit.
+7. git push origin [branch-name] – Push your changes up to the remote.
