@@ -9,8 +9,8 @@ git add hello.py
 git status
 
 # Set user email and name
-git config --global user.email "dagoberto.salazar@gmail.com"
-git config --global user.name "Dagoberto Salazar"
+git config --global user.email "user@example.com"
+git config --global user.name "User Surname"
 
 # Commit a change, with comment
 git commit -m "creating hello.py"
