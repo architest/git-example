@@ -1,12 +1,124 @@
-# Initialize a new repository
+#####
+#
+# This is a set of recipes to use Git, partly based on a very good tutorial in
+# 'Real Python' called "Introduction to Git and GitHub for Python Developers".
+# https://realpython.com/python-git-github-intro/
+#
+
+# Initialize a new local repository (repo) from scratch: Create a directory,
+# get into it, and use 'git init'
+mkdir my_new_repo
+cd my_new_repo
 git init
 
-# See status
+# See current status. Very useful instruction, and used very often
 git status
 
-# Add new file
+# Create new file in repo. Now file exists, but it is 'untracked' by Git
+echo "print('Hello World')" > hello.py
+git status
+
+# Add new file to Git tracking. Now it is tracked but it is not yet part of
+# the repo. It is in the 'staging area'
 git add hello.py
 git status
+
+# Commit a change, adding a comment. Now 'hello.py' belongs to repo
+git commit -m "Creating hello.py"
+git status
+
+# Create another file and add it to repo. Original 'hello.py' was also
+# modified, so it must be again added and commited
+touch myname.py
+git add hello.py myname.py
+git status
+git commit -m "Added myname module. Minor modification to hello.py"
+
+# The ".gitignore' file is special, because it contains the names of the files
+# which should be ignored by Git, like for instance, python .pyc files. It is
+# Ok to use wildcards inside
+vim .gitignore
+git add .gitignore
+git commit -m "created .gitignore"
+
+# See a log of the changes. This can be verbose when you have commited many
+# changes
+git log
+
+# Make a change in '.gitignore', but then changed your mind and drop it. Change
+# file back to where it was at last commit
+vim .gitignore
+git checkout -- .gitignore
+
+# Decided to apply and commit other change
+vim .gitignore
+git status
+git add .gitignore
+git commit -m "modifying .gitignore to exclude all .pyc files"
+
+# Take a look at what is different from our last commit. In this case we want
+# the diff of our most recent commit, we can refer to it using HEAD
+git diff HEAD
+
+# We can unstage files by using the 'git reset' command
+git reset octofamily/octodog.txt
+
+
+## Handle branches
+
+# To see all branches
+git branch
+
+# To create a new branch AND MOVE THERE
+git checkout -b my_new_feature
+
+# To see all branches again (current branch is marked with '*')
+git branch
+
+# Back to the top of the main branch (master)
+git checkout master
+
+# Change back to new branch
+git checkout my_new_feature
+
+# Add a change in the NEW 'my_new_feature' branch
+git add hello.py
+git commit -m "Added code for feature x"
+
+# Get back to the top of the master branch
+git checkout master
+
+# Compare the state of two branches
+git show-branch my_new_feature master
+git show-branch my_new_feature
+git show-branch master
+
+# 'HEAD' is where the repository is currently pointing to (last commit in
+# 'my_new_feature')
+git show-branch HEAD
+
+# This is like regular 'show-branch' but using SHA codes instead of names
+git show-branch --sha1-name my_new_feature master
+
+# Go back to 'master' and MERGE changes from 'my_new_feature' to 'master'
+git checkout master
+git merge my_new_feature
+
+# Removing a branch which is no longer needed
+git branch -d my_new_feature
+
+# Checkout (use) the repository at an specific point in time (98011e69...)
+# The long number is the (unique) SHA code
+git checkout 98011e69fda0df3937e99e2d7ac11ca3a1e37959
+
+
+## Miscellaneous instructions
+
+# Removing files (wildcards are also valid)
+git rm <target-file>
+
+# Removing directories
+git rm -r folder_of_cats
 
 # Set user email and name _for every repository_ in your computer
 git config --global user.email "user@example.com"
@@ -16,75 +128,8 @@ git config --global user.name "User Surname"
 git config user.email "user@example.com"
 git config user.name "User Surname"
 
-# Commit a change, with comment
-git commit -m "creating hello.py"
-git status
-git add hello.py myname.py
-git status
-git commit -m "added myname module"
-vim .gitignore
-git add .gitignore
-git commit -m "created .gitignore"
 
-# See a log of the changes
-git log
-
-# Checkout (use) the repository at an specific point in time (98011e69...)
-git checkout 98011e69fda0df3937e99e2d7ac11ca3a1e37959
-
-# Back to the top of the main branch (master)
-git checkout master
-
-# Make a change in '.gitignore' but then drop it
-vim .gitignore
-git checkout -- .gitignore
-
-vim .gitignore
-git status
-git add .gitignore
-git commit -m "modifying .gitignore to exclude all .pyc files"
-
-# To create a new branch
-git checkout my_new_feature
-
-# To create a new branch AND MOVE THERE
-git checkout -b my_new_feature
-
-# To see all the branches
-git branch
-
-# Add a change in the NEW 'my_new_feature' branch
-git add hello.py
-git status
-git commit -m "added code for feature x"
-
-# Get back to the top of the master branch
-git checkout master
-
-# Compare the state of two branches
-git show-branch my_new_feature master
-git checkout my_new_feature
-git checkout master
-git show-branch my_new_feature
-git show-branch master
-
-# 'HEAD' is where the repository is currently pointing to
-git show-branch HEAD
-
-git show-branch --sha1-name my_new_feature master
-
-# Go back to 'master' and MERGE changes from 'my_new_feature' to 'master'
-git checkout master
-git merge my_new_feature
-
-# Removing a branch which is no longer needed
-git branch -d <branch-name>
-
-# Removing files (wildcards are also valid)
-git rm <target-file>
-
-# Removing directories
-git rm -r folder_of_cats
+## Handling remote repositories
 
 # Download a full repository
 git clone https://github.com/jima80525/github-playground.git
@@ -107,16 +152,6 @@ git pull origin master
 
 # Add a remote repository to push our local repo to the GitHub server
 git remote add origin https://github.com/try-git/try_git.git
-
-# Take a look at what is different from our last commit. In this case we want
-# the diff of our most recent commit, we can refer to it using HEAD
-git diff HEAD
-
-# We can unstage files by using the 'git reset' command
-git reset octofamily/octodog.txt
-
-# Files can be changed back to how they were at last commit by using command
-git checkout -- <target>
 
 
 ## Configure Git to sync your fork with the original repository
