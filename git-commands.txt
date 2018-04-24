@@ -114,6 +114,10 @@ git checkout 98011e69fda0df3937e99e2d7ac11ca3a1e37959
 
 ## Miscellaneous instructions
 
+# Rename a file
+git mv <old-file> <new-file>
+git commit -m "Renaming file"
+
 # Removing files (wildcards are also valid)
 git rm <target-file>
 
