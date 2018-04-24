@@ -153,49 +153,70 @@ git checkout 98011e69fda0df3937e99e2d7ac11ca3a1e37959
 
 ## Miscellaneous instructions
 
-# Rename a file
+1. Rename a file
+```
 git mv <old-file> <new-file>
 git commit -m "Renaming file"
+```
 
-# Removing files (wildcards are also valid)
+2. Removing files (wildcards are also valid)
+```
 git rm <target-file>
+```
 
-# Removing directories
+3. Removing directories
+```
 git rm -r folder_of_cats
+```
 
-# Set user email and name _for every repository_ in your computer
+4. Set user email and name _for every repository_ in your computer
+```
 git config --global user.email "user@example.com"
 git config --global user.name "User Surname"
+```
 
-# Set user email and name _for a single repository_
+5. Set user email and name _for a single repository_
+```
 git config user.email "user@example.com"
 git config user.name "User Surname"
-
+```
 
 ## Handling remote repositories
 
-# Download a full repository
+1. Download a full repository
+```
 git clone https://github.com/jima80525/github-playground.git
+```
 
-# Download to the current computer the changes in an already present repository
+2. **Download** (_pull_) to the current computer the changes in an already present repository
+```
 git pull https://github.com/architest/git-example
+```
 
-# Upload the local changes to GitHub:
+3. **Upload** (_push_) the local changes to GitHub:
+```
 git push https://github.com/architest/git-example master
+```
 
-# 'origin' is an alias for server repository (if we started by cloning a repo)
+4. '**origin**' is an alias for server repository (if we started by cloning a repo), so the former instruction can be abbreviated as:
+```
 git push origin master
+```
 
-# The same, but the '-u' option tell Git to remember the parameters, so
-# afterwards we only need to write 'git push'
+5. The same, but the `-u` option tell Git to remember the parameters, so afterwards we only need to write `git push`
+```
 git push -u origin master
+```
 
-# Pulling, but in a more compact way
+6. Pulling, but in a more compact way
+```
 git pull origin master
+```
 
-# Add a remote repository to push our local repo to the GitHub server
+7. Add a remote repository to push our local repo to the GitHub server (i.e.: We created out repository from scratch and we are setting `origin` in order to be able to _push it_ to a remote server)
+```
 git remote add origin https://github.com/try-git/try_git.git
-
+```
 
 ## Configure Git to sync your fork with the original repository
 
