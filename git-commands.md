@@ -213,7 +213,7 @@ git push -u origin master
 git pull origin master
 ```
 
-7. Add a remote repository to push our local repo to the GitHub server (i.e.: We created out repository from scratch and we are setting `origin` in order to be able to _push it_ to a remote server)
+7. Add a remote repository to push our local repo to the GitHub server (i.e.: We created our repository from scratch, and we are setting `origin` in order to be able to _push it_ to a remote server)
 ```
 git remote add origin https://github.com/try-git/try_git.git
 ```
