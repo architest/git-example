@@ -222,8 +222,8 @@ git remote add origin https://github.com/try-git/try_git.git
 
 1. First, fork the repository using GitHub facilities for that
 
-  Original repository is: https://github.com/jima80525/github-playground.git
-  The forked repository is: https://github.com/architest/github-playground.git
+   - Original repository is: https://github.com/jima80525/github-playground.git
+   - The forked repository is: https://github.com/architest/github-playground.git
 
 2. Then, clone the repository to the local machine
 ```
@@ -276,7 +276,6 @@ git merge upstream/master
 
 
 # Simple git workflow:
-====================
 
 1. `git status` – Make sure your current area is clean.
 2. `git pull` – Get the latest version from the remote. This saves merging issues later.
