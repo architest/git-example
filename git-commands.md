@@ -44,7 +44,7 @@ git status
 git commit -m "Added myname module. Minor modification to hello.py"
 ```
 
-   Instead of specifying each file in the `git add` line, we can do:
+   - Instead of specifying each file in the `git add` line, we can do:
 ```
 git add --all
 ```
