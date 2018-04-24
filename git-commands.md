@@ -186,6 +186,18 @@ git config user.email "user@example.com"
 git config user.name "User Surname"
 ```
 
+6. Several aspects of Git behavior, like aliases, may be set up at file `~/.gitconfig`. An example content could be:
+```
+[user]
+    name = architest
+    email = 23104729+architest@users.noreply.github.com
+[color]
+    ui = true
+[alias]
+    co = checkout
+    br = branch
+```
+
 ## Handling remote repositories
 
 1. Download a full repository
