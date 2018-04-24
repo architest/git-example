@@ -1,68 +1,83 @@
-#####
-#
-# This is a set of recipes to use Git, partly based on a very good tutorial in
-# 'Real Python' called "Introduction to Git and GitHub for Python Developers".
-# https://realpython.com/python-git-github-intro/
-#
+# Git Commands
 
-# Initialize a new local repository (repo) from scratch: Create a directory,
-# get into it, and use 'git init'
+This is a set of recipes to use Git, partly based on a very good tutorial in
+'Real Python' called [Introduction to Git and GitHub for Python Developers](https://realpython.com/python-git-github-intro/)
+
+## Basic, day-to-day commands
+
+1. Initialize a new local repository (repo) from scratch: Create a directory, get into it, and use 'git init'
+```
 mkdir my_new_repo
 cd my_new_repo
 git init
+```
 
-# See current status. Very useful instruction, and used very often
+2. See current status. Very useful instruction, and used very often
+```
 git status
+```
 
-# Create new file in repo. Now file exists, but it is 'untracked' by Git
+3. Create new file in repo. Now file exists, but it is _untracked_ by Git
+```
 echo "print('Hello World')" > hello.py
 git status
+```
 
-# Add new file to Git tracking. Now it is tracked but it is not yet part of
-# the repo. It is in the 'staging area'
+4. Add new file to Git tracking. Now it is tracked but it is not yet part of the repo. It is in the **_staging area_**
+```
 git add hello.py
 git status
+```
 
-# Commit a change, adding a comment. Now 'hello.py' belongs to repo
+5. Commit a change, adding a comment. Now `hello.py` belongs to repo
+```
 git commit -m "Creating hello.py"
 git status
+```
 
-# Create another file and add it to repo. Original 'hello.py' was also
-# modified, so it must be again added and commited
+5. Create another file and add it to repo. Original `hello.py` was also modified, so it must be again added and commited
+```
 touch myname.py
 git add hello.py myname.py
 git status
 git commit -m "Added myname module. Minor modification to hello.py"
+```
 
-# The ".gitignore' file is special, because it contains the names of the files
-# which should be ignored by Git, like for instance, python .pyc files. It is
-# Ok to use wildcards inside
+6. The `.gitignore` file is special, because it contains the names of the files which should be ignored by Git, like for instance, python `.pyc` files. It is Ok to use wildcards inside it
+```
 vim .gitignore
 git add .gitignore
 git commit -m "created .gitignore"
+```
 
-# See a log of the changes. This can be verbose when you have commited many
-# changes
+7. See a log of the changes. This can be verbose when you have commited many changes
+```
 git log
+```
 
-# Make a change in '.gitignore', but then changed your mind and drop it. Change
-# file back to where it was at last commit
+8. Make a change in `.gitignore`, but then changed your mind and **drop it**. Change file back to where it was at last commit
+```
 vim .gitignore
 git checkout -- .gitignore
+```
 
-# Decided to apply and commit other change
+9. Decided to apply and commit other change
+```
 vim .gitignore
 git status
 git add .gitignore
 git commit -m "modifying .gitignore to exclude all .pyc files"
+```
 
-# Take a look at what is different from our last commit. In this case we want
-# the diff of our most recent commit, we can refer to it using HEAD
+10. Take a look at what is different from our last commit. In this case we want the diff of our most recent commit, and we can refer to it using **_HEAD_**
+```
 git diff HEAD
+```
 
-# We can unstage files by using the 'git reset' command
+11. We can unstage files by using the `git reset` command
+```
 git reset octofamily/octodog.txt
-
+```
 
 ## Handle branches
 
