@@ -44,6 +44,11 @@ git status
 git commit -m "Added myname module. Minor modification to hello.py"
 ```
 
+Instead of specifying each file in the `git add` line, we can do:
+```
+git add --all
+```
+
 7. The `.gitignore` file is special, because it contains the names of the files which should be ignored by Git, like for instance, python `.pyc` files. It is Ok to use wildcards inside it
 ```
 vim .gitignore
