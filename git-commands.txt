@@ -8,9 +8,13 @@ git status
 git add hello.py
 git status
 
-# Set user email and name
+# Set user email and name _for every repository_ in your computer
 git config --global user.email "user@example.com"
 git config --global user.name "User Surname"
+
+# Set user email and name _for a single repository_
+git config user.email "user@example.com"
+git config user.name "User Surname"
 
 # Commit a change, with comment
 git commit -m "creating hello.py"
