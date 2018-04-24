@@ -1,4 +1,4 @@
-# Git Commands
+# Git commands
 
 This is a set of recipes to use Git, partly based on a very good tutorial in
 'Real Python' called [Introduction to Git and GitHub for Python Developers](https://realpython.com/python-git-github-intro/)
@@ -35,7 +35,7 @@ git commit -m "Creating hello.py"
 git status
 ```
 
-5. Create another file and add it to repo. Original `hello.py` was also modified, so it must be again added and commited
+6. Create another file and add it to repo. Original `hello.py` was also modified, so it must be again added and commited
 ```
 vim myname.py
 vim hello.py
@@ -44,25 +44,25 @@ git status
 git commit -m "Added myname module. Minor modification to hello.py"
 ```
 
-6. The `.gitignore` file is special, because it contains the names of the files which should be ignored by Git, like for instance, python `.pyc` files. It is Ok to use wildcards inside it
+7. The `.gitignore` file is special, because it contains the names of the files which should be ignored by Git, like for instance, python `.pyc` files. It is Ok to use wildcards inside it
 ```
 vim .gitignore
 git add .gitignore
 git commit -m "Created .gitignore"
 ```
 
-7. See a log of the changes. This can be verbose when you have commited many changes
+8. See a log of the changes. This can be verbose when you have commited many changes
 ```
 git log
 ```
 
-8. You made a change in `.gitignore`, but then changed your mind and **dropped it**. This instruction changes file back to where it was at last commit
+9. You made a change in `.gitignore`, but then changed your mind and **dropped it**. This instruction changes file back to where it was at last commit
 ```
 vim .gitignore
 git checkout -- .gitignore
 ```
 
-9. You decided to apply and commit other change
+10. You decided to apply and commit other change
 ```
 vim .gitignore
 git status
@@ -70,17 +70,17 @@ git add .gitignore
 git commit -m "Modifying .gitignore to exclude all .pyc files"
 ```
 
-10. Take a look at what is different from our last commit. In this case we want the diff of our most recent commit, and we can refer to it using **_HEAD_**
+11. Take a look at what is different from our last commit. In this case we want the diff of our most recent commit, and we can refer to it using **_HEAD_**
 ```
 git diff HEAD
 ```
 
-11. We can unstage files by using the `git reset` command
+12. We can unstage files by using the `git reset` command
 ```
 git reset octofamily/octodog.txt
 ```
 
-## Handle branches
+## Handling branches
 
 1. To see all branches
 ```
