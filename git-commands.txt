@@ -1,4 +1,4 @@
-# Initialize a repository
+# Initialize a new repository
 git init
 
 # See status
