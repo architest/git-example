@@ -119,6 +119,55 @@ git reset octofamily/octodog.txt
 git checkout -- <target>
 
 
+## Configure Git to sync your fork with the original repository
+
+- First, fork the repository using GitHub facilities for that
+
+  Original repository is: https://github.com/jima80525/github-playground.git
+  The forked repository is: https://github.com/architest/github-playground.git
+
+- Then, clone the repository to the local machine
+
+git clone https://github.com/architest/github-playground.git
+
+- Get into the cloned repository. It is good to check the current configured
+  remote repository
+
+git remote -v
+
+  The result should be something like:
+
+origin  https://github.com/architest/github-playground.git (fetch)
+origin  https://github.com/architest/github-playground.git (push)
+
+- Add the path to the original repository
+
+git remote add upstream https://github.com/jima80525/github-playground.git
+
+- Verify that it worked:
+
+git remote -v
+
+origin  https://github.com/architest/github-playground.git (fetch)
+origin  https://github.com/architest/github-playground.git (push)
+upstream    https://github.com/jima80525/github-playground.git (fetch)
+upstream    https://github.com/jima80525/github-playground.git (push)
+
+- Now, in order to fetch changes from the 'upstream' repository you do:
+
+git fetch upstream
+
+- Possible changes are in 'upstream/master'. Make sure you're in 'master':
+
+git checkout master
+
+- Merge changes from 'upstream/master' into local 'master' branch
+
+git merge upstream/master
+
+- Updated!!!
+
+
 Simple git workflow:
 ====================
 
