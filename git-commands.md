@@ -198,12 +198,12 @@ git pull https://github.com/architest/git-example
 git push https://github.com/architest/git-example master
 ```
 
-4. '**origin**' is an alias for server repository (if we started by cloning a repo), so the former instruction can be abbreviated as:
+4. '**origin**' is an alias for the remote server repository (if we started by _cloning_ a repo), so the former instruction can be abbreviated as:
 ```
 git push origin master
 ```
 
-5. The same, but the `-u` option tell Git to remember the parameters, so afterwards we only need to write `git push`
+5. The same, but the `-u` option tell Git to remember the parameters, so afterwards we only need to write `git push` (some conditions may apply)
 ```
 git push -u origin master
 ```
@@ -220,63 +220,68 @@ git remote add origin https://github.com/try-git/try_git.git
 
 ## Configure Git to sync your fork with the original repository
 
-- First, fork the repository using GitHub facilities for that
+1. First, fork the repository using GitHub facilities for that
 
   Original repository is: https://github.com/jima80525/github-playground.git
   The forked repository is: https://github.com/architest/github-playground.git
 
-- Then, clone the repository to the local machine
-
+2. Then, clone the repository to the local machine
+```
 git clone https://github.com/architest/github-playground.git
+```
 
-- Get into the cloned repository. It is good to check the current configured
-  remote repository
-
+3. Get into the cloned repository. It is good to check the currently configured remote repository
+```
 git remote -v
+```
 
   The result should be something like:
-
+```
 origin  https://github.com/architest/github-playground.git (fetch)
 origin  https://github.com/architest/github-playground.git (push)
+```
 
-- Add the path to the original repository
-
+4. Add the path to the original repository
+```
 git remote add upstream https://github.com/jima80525/github-playground.git
+```
 
-- Verify that it worked:
-
+5. Verify that it worked:
+```
 git remote -v
-
+```
+```
 origin  https://github.com/architest/github-playground.git (fetch)
 origin  https://github.com/architest/github-playground.git (push)
 upstream    https://github.com/jima80525/github-playground.git (fetch)
 upstream    https://github.com/jima80525/github-playground.git (push)
+```
 
-- Now, in order to fetch changes from the 'upstream' repository you do:
-
+6. Now, in order to fetch changes from the `upstream` repository you do:
+```
 git fetch upstream
+```
 
-- Possible changes are in 'upstream/master'. Make sure you're in 'master':
-
+7. Possible changes are in `upstream/master`. Make sure you're in `master`:
+```
 git checkout master
+```
 
-- Merge changes from 'upstream/master' into local 'master' branch
-
+8. Merge changes from `upstream/master` into local `master` branch
+```
 git merge upstream/master
+```
 
-- Updated!!!
+9. Updated!!!
 
 
-Simple git workflow:
+# Simple git workflow:
 ====================
 
-1. git status – Make sure your current area is clean.
-2. git pull – Get the latest version from the remote. This saves merging
-   issues later.
-3. Edit your files and make your changes. Remember to run your linter and do
-   unit tests!
-4. git status – Find all files that are changed. Make sure to watch untracked
-   files too!
-5. git add [files] – Add the changed files to the staging area.
-6. git commit -m "message" – Make your new commit.
-7. git push origin [branch-name] – Push your changes up to the remote.
+1. `git status` – Make sure your current area is clean.
+2. `git pull` – Get the latest version from the remote. This saves merging issues later.
+3. Edit your files and make your changes. Remember to run your linter and do unit tests!
+4. `git status` – Find all files that are changed. Make sure to watch untracked files too!
+5. `git add [files]` – Add the changed files to the staging area.
+6. `git commit -m "message"` – Make your new commit.
+7. `git push origin [branch-name]` – Push your changes up to the remote.
