@@ -1,6 +1,12 @@
 1st line
+<<<<<<< HEAD
     New indented line
 2nd line. More
 3rd line. Even more
+=======
+2nd line. More chars
+3rd line. Adding extra stuff
+>>>>>>> newbranch
 4th line
+    Additional line
 5th line
