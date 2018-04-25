@@ -225,7 +225,7 @@ git push origin master
 git push -u origin master
 ```
 
-6. Pulling, but in a more compact way
+6. _Pulling_, but in a more compact way
 ```
 git pull origin master
 ```
