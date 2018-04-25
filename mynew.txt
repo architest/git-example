@@ -1,5 +1,6 @@
 1st line
-2nd line
-3rd line
+2nd line. More chars
+3rd line. Adding extra stuff
 4th line
+    Additional line
 5th line
