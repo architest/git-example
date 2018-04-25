@@ -1,6 +1,6 @@
 # Instructions to use vim-fugitive
 
-- Using the :Git command, we can run any arbitrary git command from inside Vim
+- Using the `:Git` command, we can run any arbitrary git command from inside Vim
 For instance:
 ```
 :Git checkout -b experimental
@@ -43,5 +43,4 @@ For instance:
 :Git push origin master
 ```
 
-- Additional, valuable information may be found at:
-[The Fugitive Series - a retrospective](http://vimcasts.org/blog/2011/05/the-fugitive-series/)
+- Additional, valuable information may be found at: [The Fugitive Series - a retrospective](http://vimcasts.org/blog/2011/05/the-fugitive-series/)
