@@ -48,7 +48,7 @@ For instance:
 :Gdiff
 ```
 
-  when being on the conflict file. If we want to force vertical windows, use:
+    when being on the conflict file. If we want to force vertical windows, use:
 
 ```
 :Gvdiff
@@ -66,8 +66,8 @@ For instance:
 ```
 :diffget //3
 ```
-  or even better, do this and at the same time update the colors in the diff
-  windows (it gets messed up after `diffget` or `diffput`):
+
+    or even better, do this and at the same time update the colors in the diff windows (it gets messed up after `diffget` or `diffput`):
 
 ```
 :diffget //3 | diffupdate
@@ -85,18 +85,14 @@ For instance:
 :only
 ```
 
-- After this, go through the standard procedure of `:Gstatus`, `:Gwrite` and
-  `:Gcommit`
+- After this, go through the standard procedure of `:Gstatus`, `:Gwrite` and `:Gcommit`
 
-- It often happens that we want to accept **all** the changes from a given
-  branch. In order to do that, go to the windows containing the file from the
-  desired branch, and use:
+- It often happens that we want to accept **all** the changes from a given branch. In order to do that, go to the windows containing the file from the desired branch, and use:
 
 ```
 :Gwrite!
 ```
 
-  The '!' sign is needed to force the writing, because Fugitive wants to be
-  sure that you're not going to loose previously picked up changes
+    The '!' sign is needed to force the writing, because Fugitive wants to be sure that you're not going to loose previously picked up changes
 
 - Additional, valuable information may be found at: [The Fugitive Series - a retrospective](http://vimcasts.org/blog/2011/05/the-fugitive-series/)
