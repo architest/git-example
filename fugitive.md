@@ -1,7 +1,6 @@
 # Instructions to use vim-fugitive
 
-- Using the `:Git` command, we can run any arbitrary git command from inside Vim
-For instance:
+- Using the `:Git` command, we can run any arbitrary git command from inside Vim. For instance:
 ```
 :Git checkout -b experimental
 ```
@@ -48,14 +47,13 @@ For instance:
 :Gdiff
 ```
 
-    when being on the conflict file. If we want to force vertical windows, use:
+  when being on the conflict file. If we want to force vertical windows, use:
 
 ```
 :Gvdiff
 ```
 
-- Being in the central buffer, we accept the changes from the left (target
-  branch/master) doing:
+- Being in the central buffer, we accept the changes from the left (target branch/master) doing:
 
 ```
 :diffget //2
@@ -67,7 +65,7 @@ For instance:
 :diffget //3
 ```
 
-    or even better, do this and at the same time update the colors in the diff windows (it gets messed up after `diffget` or `diffput`):
+  or even better, do this and at the same time update the colors in the diff windows (it gets messed up after `diffget` or `diffput`):
 
 ```
 :diffget //3 | diffupdate
@@ -93,6 +91,6 @@ For instance:
 :Gwrite!
 ```
 
-    The '!' sign is needed to force the writing, because Fugitive wants to be sure that you're not going to loose previously picked up changes
+  The '!' sign is needed to force the writing, because Fugitive wants to be sure that you're not going to loose previously picked up changes
 
 - Additional, valuable information may be found at: [The Fugitive Series - a retrospective](http://vimcasts.org/blog/2011/05/the-fugitive-series/)
