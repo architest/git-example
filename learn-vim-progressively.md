@@ -111,112 +111,117 @@ Most commands can be used using the following general format:
 
 ## 4TH LEVEL:
 
+
 1. General:
 
-  - `0` -> go to column 0 (zero)
-  - `^` -> go to the first **NON-BLANK** character on this line
-  - `$` -> to to the last column
-  - `g_` -> go to the last **NON-BLANK** character on this line
-  - `fX` -> go to the next occurence of character 'X' on this line
+   - `0` -> go to column 0 (zero)
+   - `^` -> go to the first **NON-BLANK** character on this line
+   - `$` -> to to the last column
+   - `g_` -> go to the last **NON-BLANK** character on this line
+   - `fX` -> go to the next occurence of character 'X' on this line
 
-    For instance:
-    - `3fX` -> find the 3rd occurence of character 'X' in this line
+     For instance:
+     - `3fX` -> find the 3rd occurence of character 'X' in this line
 
-    - `F` -> like 'f', but backwards
-    - `,` -> find the **NEXT** occurrence
-    - `;` -> find the **PREVIOUS** occurrence
+     - `F` -> like 'f', but backwards
+     - `,` -> find the **NEXT** occurrence
+     - `;` -> find the **PREVIOUS** occurrence
 
-  - `tX` -> go to just **BEFORE** the character 'X'
-    - `T` -> like 't', but backwards
-  - `dtX` -> remove everything up to 'X', without including it
+   - `tX` -> go to just **BEFORE** the character 'X'
+     - `T` -> like 't', but backwards
+   - `dtX` -> remove everything up to 'X', without including it
 
 
 2. Zone selection:
 
-  This follows the patterns:
+   This follows the patterns:
 
 ```
     <action>a<object> and <action>i<object>
 ```
 
-  Where action can be `d` (delete), `y` (yank), `v` (select in visual mode),etc. The object can be: w (word), W (WORD), s (sentence), p (paragraph), but also natural characters like ", ', ), }, ].
+   Where action can be `d` (delete), `y` (yank), `v` (select in visual mode),etc. The object can be: w (word), W (WORD), s (sentence), p (paragraph), but also natural characters like ", ', ), }, ].
 
-  Suppose the cursor is on the first 'o' of `(map (+) ("foo"))`:
+   Suppose the cursor is on the first 'o' of `(map (+) ("foo"))`:
 
-  - `vi"` -> will select `foo`
-  - `va"` -> will select `"foo"`
-  - `vi)` -> will select `"foo"`
-  - `va)` -> will select `("foo")`
-  - `v2i)` -> will select `map (+) ("foo")`
-  - `v2a)` -> will select `(map (+) ("foo"))`
+   - `vi"` -> will select `foo`
+   - `va"` -> will select `"foo"`
+   - `vi)` -> will select `"foo"`
+   - `va)` -> will select `("foo")`
+   - `v2i)` -> will select `map (+) ("foo")`
+   - `v2a)` -> will select `(map (+) ("foo"))`
+
 
 3. Rectangular blocks:
 
-  They are very useful for commenting many lines of code. For instance:
+   They are very useful for commenting many lines of code. For instance:
 
 ```
     ^<Ctrl-v><Ctrl-d>I-- [ESC][ESC]
 ```
 
-  - `^` -> go to the first non-blank character of the line
-  - `Ctrl-v` -> start of block selection (_ATTENTION!_, it is **_CTRL_**!!!)
-  - `Ctrl-d` -> move down (could also be jjj, %, etc.)
-  - `I-- [ESC][ESC]` -> write `-- ` to comment each line
-  - `o` -> in Visual Block Mode, toggles selection cursor to **OPPOSITE** corner
+   - `^` -> go to the first non-blank character of the line
+   - `Ctrl-v` -> start of block selection (_ATTENTION!_, it is **_CTRL_**!!!)
+   - `Ctrl-d` -> move down (could also be jjj, %, etc.)
+   - `I-- [ESC][ESC]` -> write `-- ` to comment each line
+   - `o` -> in Visual Block Mode, toggles selection cursor to **OPPOSITE** corner
 
-  Note #1: Instead of `I` we can use `i`, `A`, `a`, `c`, `r`, etc.
-  Note #2: Don't confuse `Ctrl-v` (Visual Block Mode) with `V` and `v` modes
+    Note #1: Instead of `I` we can use `i`, `A`, `a`, `c`, `r`, etc.
+
+    Note #2: Don't confuse `Ctrl-v` (Visual Block Mode) with `V` and `v` modes
+
 
 4. Completion:
 
-  - `Ctrl-p` -> call the autocompletion feature
+   - `Ctrl-p` -> call the autocompletion feature
+
 
 5. Macros:
 
-  - `qa` -> records your actions in register 'a'
-  - `@a` -> this will call the macro saved in register 'a'
-  - `@@` -> calls the last executed macro
+   - `qa` -> records your actions in register 'a'
+   - `@a` -> this will call the macro saved in register 'a'
+   - `@@` -> calls the last executed macro
 
-  Example: On a line containing only the number 1, type:
+   Example: On a line containing only the number 1, type:
 
-  - `qaYp<Ctrl-a>q`
-    - `qa` -> starts recording the macro
-    - `Yp` -> duplicates this line
-    - `Ctrl-a` -> increments the number
-    - `q` -> stops recording the macro
-  - `@a` -> writes 2 under 1
-  - `@@` -> writes 3 under 2
-  - `100@@` -> writes increasing numbers up to 103
+   - `qaYp<Ctrl-a>q`
+     - `qa` -> starts recording the macro
+     - `Yp` -> duplicates this line
+     - `Ctrl-a` -> increments the number
+     - `q` -> stops recording the macro
+   - `@a` -> writes 2 under 1
+   - `@@` -> writes 3 under 2
+   - `100@@` -> writes increasing numbers up to 103
 
 6. Visual selection: `v`, `V` and `Ctrl-v`
 
-  Once the selection has been made:
+   Once the selection has been made:
 
-  - `J` -> joins all the lines together
-  - `<` -> indent to the left
-  - `>` -> indent to the right
-  - `=` -> autoindent
+   - `J` -> joins all the lines together
+   - `<` -> indent to the left
+   - `>` -> indent to the right
+   - `=` -> autoindent
 
-  To add something at the end of all visually selected lines:
+   To add something at the end of all visually selected lines:
 
-  - `Ctrl-v` -> gets into Visual Block Mode
-  - go to the desired line (with `j`, `Ctrl-d`, `/pattern`, etc)
-  - `$` -> go to the end of the line
-  - `A` + write text + `ESC`
+   - `Ctrl-v` -> gets into Visual Block Mode
+   - go to the desired line (with `j`, `Ctrl-d`, `/pattern`, etc)
+   - `$` -> go to the end of the line
+   - `A` + write text + `ESC`
 
 7. Splits:
 
-  - `:split` -> create a (horizontal) split (shorthand: `:sp`)
-  - `:vsplit` -> create a vertical split (shorthand: `:vs`)
-  - `Ctrl-w <direction>` -> (where <direction> is `hjkl`) to change split
-  - `Ctrl-w_` -> Maximise the size of the (horizontal) split
-  - `Ctrl-w |` -> Maximise the size of the vertical split
-  - `Ctrl-w +` -> Grow the split
-  - `Ctrl-w -` -> Shrink the split
+   - `:split` -> create a (horizontal) split (shorthand: `:sp`)
+   - `:vsplit` -> create a vertical split (shorthand: `:vs`)
+   - `Ctrl-w <direction>` -> (where <direction> is `hjkl`) to change split
+   - `Ctrl-w_` -> Maximise the size of the (horizontal) split
+   - `Ctrl-w |` -> Maximise the size of the vertical split
+   - `Ctrl-w +` -> Grow the split
+   - `Ctrl-w -` -> Shrink the split
 
 8. The manuals:
 
-  - `:help usr_01.txt` -> Start the User Manual
-  - `Ctrl-]` -> jumps to the subject under the cursor
-  - `Ctrl-o` -> jumps back
+   - `:help usr_01.txt` -> Start the User Manual
+   - `Ctrl-]` -> jumps to the subject under the cursor
+   - `Ctrl-o` -> jumps back
 
