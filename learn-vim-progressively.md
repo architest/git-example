@@ -64,11 +64,11 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 - `.` -> (dot) will repeat the last command
 - `N<command>` will repeat <command> 'N' times
 
-For example:
+  For example:
 
-    - `100idesu [ESC]` -> will write "desu " 100 times
-    - `.` (dot) -> just after last command will write again 100 times "desu "
-    - `3.` -> will write 3 times "desu " (and not 300 times)
+  - `100idesu [ESC]` -> will write "desu " 100 times
+  - `.` (dot) -> just after last command will write again 100 times "desu "
+  - `3.` -> will write 3 times "desu " (and not 300 times)
 
 - `NG` -> go to line 'N'
 - `gg` -> go to start of file (shortcut for `1G`)
@@ -97,16 +97,16 @@ Most commands can be used using the following general format:
     <START position><COMMAND><END position>
 ```
 
-For example, `0y$` means:
+  For example, `0y$` means:
 
-- `0` -> (Zero) go to the beginning of this line
-- `y` -> yank from here...
-- `$` -> ...up to the end of this line
+  - `0` -> (Zero) go to the beginning of this line
+  - `y` -> yank from here...
+  - `$` -> ...up to the end of this line
 
-Other examples are:
+  Other examples are:
 
-- `ye` -> yank to the end of this word
-- `y2/foo` -> yank up to the second occurence of "foo"
+  - `ye` -> yank to the end of this word
+  - `y2/foo` -> yank up to the second occurence of "foo"
 
 
 # 4TH LEVEL:
