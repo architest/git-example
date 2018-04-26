@@ -34,7 +34,7 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
     - `^` -> go to the first **NON-BLANK** character of the line
     - `$` -> go to the end of the line
     - `g_` -> go to the last **NON-BLANK** character of the line
-    - `/_pattern_` -> search for 'pattern'
+    - `/pattern` -> search for 'pattern'
 
 3. Copy/Paste:
 
@@ -49,9 +49,9 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 
 5. Load/Save/Quit/Change File (Buffer):
 
-    - `:e _<path/to/file>_` -> open <path/to/file>
+    - `:e <path/to/file>` -> open <path/to/file>
     - `:w` -> save
-    - `:saveas _<path/to/file>_` -> save to <path/to/file>
+    - `:saveas <path/to/file>` -> save to <path/to/file>
     - `:wq`, `:x` or `ZZ` -> save and quit (`:x` only save if necessary)
     - `:q!` -> quit without saving
     - `:qa!` -> quit without saving even if there are modified hidden buffers
@@ -61,52 +61,52 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 
 ## 3RD LEVEL:
 
-    - `.` -> (dot) will repeat the last command
-    - `_N_<command>` will repeat <command> 'N' times
+- `.` -> (dot) will repeat the last command
+- `N<command>` will repeat <command> 'N' times
 
-    For example:
+For example:
 
-        - `100idesu [ESC]` -> will write "desu " 100 times
-        - `.` (dot) -> just after last command will write again 100 times "desu "
-        - `3.` -> will write 3 times "desu " (and not 300 times)
+    - `100idesu [ESC]` -> will write "desu " 100 times
+    - `.` (dot) -> just after last command will write again 100 times "desu "
+    - `3.` -> will write 3 times "desu " (and not 300 times)
 
-    - `_N_G` -> go to line 'N'
-    - `gg` -> go to start of file (shortcut for `1G`)
-    - `G` -> go to last line
+- `NG` -> go to line 'N'
+- `gg` -> go to start of file (shortcut for `1G`)
+- `G` -> go to last line
 
-    Mind that '**words**' are composed of letters and underscore character, while
-    '**WORDS**' are a group of characters separated by blank characteres. Thence,
-    in the following string:
+Mind that '**words**' are composed of letters and underscore character, while '**WORDS**' are a group of characters separated by blank characteres. Thence, in the following string:
 
 ```
-        (name_1,vision_3); # this is a comment.
+    (name_1,vision_3); # this is a comment.
 ```
 
-    the first '**word**' is `name_1`, while the first '**WORD**' is `(name_1,vision_3);`
+the first '**word**' is `name_1`, while the first '**WORD**' is `(name_1,vision_3);`
 
-    - `w` -> go to the start of the following 'word'
-    - `W` -> go to the start of the following 'WORD'
-    - `e` -> go to the end of this 'word'
-    - `E` -> go to the end of this 'WORD'
+- `w` -> go to the start of the following 'word'
+- `W` -> go to the start of the following 'WORD'
+- `e` -> go to the end of this 'word'
+- `E` -> go to the end of this 'WORD'
 
-    - `%` -> go to the correspondig (, {, [
-    - `*` -> go to the NEXT occurence of the word under the cursor
-    - `#` -> go to the PREVIOUS occurence of the word under the cursor
+- `%` -> go to the correspondig (, {, [
+- `*` -> go to the NEXT occurence of the word under the cursor
+- `#` -> go to the PREVIOUS occurence of the word under the cursor
 
-    Most commands can be used using the following general format:
+Most commands can be used using the following general format:
+
 ```
-        <START position><COMMAND><END position>
+    <START position><COMMAND><END position>
 ```
-    For example, `0y$` means:
 
-        - `0` -> (Zero) go to the beginning of this line
-        - `y` -> yank from here...
-        - `$` -> ...up to the end of this line
+For example, `0y$` means:
 
-    Other examples are:
+- `0` -> (Zero) go to the beginning of this line
+- `y` -> yank from here...
+- `$` -> ...up to the end of this line
 
-        - `ye` -> yank to the end of this word
-        - `y2/foo` -> yank up to the second occurence of "foo"
+Other examples are:
+
+- `ye` -> yank to the end of this word
+- `y2/foo` -> yank up to the second occurence of "foo"
 
 
 # 4TH LEVEL:
