@@ -9,14 +9,14 @@ The following text is based on the tutorial **_Learn Vim Progressively_** that c
 
 Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get back to NORMAL mode just press the `ESC` key.
 
-- `i` -> Go to INSERT mode
-- `ESC` -> Back to NORMAL mode
-- `x` -> Delete the character under the cursor
-- `:wq` -> Save (`:w`) and Quit (`:q`)
-- `dd` -> Delete (and copy to clipboard) the current line
-- `p` -> Paste what is in clipboard
-- `hjkl` -> Move Left, Down, Up, Right (`j` looks like a down arrow)
-- `:help <command>` -> Show help about <command>. `:help` provides general help
+  `i` -> Go to INSERT mode
+  `ESC` -> Back to NORMAL mode
+  `x` -> Delete the character under the cursor
+  `:wq` -> Save (`:w`) and Quit (`:q`)
+  `dd` -> Delete (and copy to clipboard) the current line
+  `p` -> Paste what is in clipboard
+  `hjkl` -> Move Left, Down, Up, Right (`j` looks like a down arrow)
+  `:help <command>` -> Show help about <command>. `:help` provides general help
 
 
 ## 2ND LEVEL:
@@ -111,11 +111,11 @@ Most commands can be used using the following general format:
 
 # 4TH LEVEL:
 
-- `0` -> go to column 0 (zero)
-- `^` -> go to the first **NON-BLANK** character on this line
-- `$` -> to to the last column
-- `g_` -> go to the last **NON-BLANK** character on this line
-- `fX` -> go to the next occurence of character 'X' on this line
+  `0` -> go to column 0 (zero)
+  `^` -> go to the first **NON-BLANK** character on this line
+  `$` -> to to the last column
+  `g_` -> go to the last **NON-BLANK** character on this line
+  `fX` -> go to the next occurence of character 'X' on this line
 
   For instance:
   - `3fX` -> find the 3rd occurence of character 'X' in this line
@@ -124,9 +124,9 @@ Most commands can be used using the following general format:
   - `,` -> find the **NEXT** occurrence
   - `;` -> find the **PREVIOUS** occurrence
 
-- `tX` -> go to just **BEFORE** the character 'X'
+  `tX` -> go to just **BEFORE** the character 'X'
   - `T` -> like 't', but backwards
-- `dtX` -> remove everything up to 'X', without including it
+  `dtX` -> remove everything up to 'X', without including it
 
 1. Zone selection:
 
