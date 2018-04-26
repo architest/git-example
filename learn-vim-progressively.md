@@ -134,15 +134,15 @@ Most commands can be used using the following general format:
 
 2. Zone selection:
 
-     This follows the patterns:
+   This follows the patterns:
 
 ```
     <action>a<object> and <action>i<object>
 ```
 
-     Where action can be `d` (delete), `y` (yank), `v` (select in visual mode),etc. The object can be: w (word), W (WORD), s (sentence), p (paragraph), but also natural characters like ", ', ), }, ].
+   Where action can be `d` (delete), `y` (yank), `v` (select in visual mode),etc. The object can be: w (word), W (WORD), s (sentence), p (paragraph), but also natural characters like ", ', ), }, ].
 
-     Suppose the cursor is on the first 'o' of `(map (+) ("foo"))`:
+   Suppose the cursor is on the first 'o' of `(map (+) ("foo"))`:
 
    - `vi"` -> will select `foo`
    - `va"` -> will select `"foo"`
