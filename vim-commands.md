@@ -32,7 +32,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
       (name_1,vision_3; # this is a comment.
 ```
 
-     Here the first '**word**' is `name_1`, while the first '**WORD**' is `(name_1,vision_3;`
+   Here the first '**word**' is `name_1`, while the first '**WORD**' is `(name_1,vision_3;`
 
    - `w` next **word** (by punctuation)
    - `W` next **WORD** (by spaces)
@@ -103,7 +103,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
 ## Inserting
 
-    All insertion commands are terminated with `Esc` to return to command mode.
+   All insertion commands are terminated with `Esc` to return to command mode.
 
    - `i` inserts text at cursor
    - `I` inserts text at start of line
@@ -115,7 +115,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
 ## Changing
 
-    All change commands except `r` and `R` are terminated with `Esc` to return to command mode.
+   All change commands except `r` and `R` are terminated with `Esc` to return to command mode.
 
    - `r` replaces single character
    - `R` replaces multiple characters
@@ -266,21 +266,21 @@ This information is partially taken from [here](https://stackoverflow.com/questi
       <START position><COMMAND><END position>
 ```
 
-      For example, `0y$` means:
+   For example, `0y$` means:
 
-      - `0` goes to the beggining of this line
-      - `y` yanks from here...
-      - `$` ...up to the end of this line
+     - `0` goes to the beggining of this line
+     - `y` yanks from here...
+     - `$` ...up to the end of this line
 
-      So, `ye` means '_yank from here to the end of the word_'
+   So, `ye` means '_yank from here to the end of the word_'
 
-      Another example is `y2/foo`: '_yank up to the second occurrence of "foo"_'
+   Another example is `y2/foo`: '_yank up to the second occurrence of "foo"_'
 
-      Also:
+   Also:
 
-      - `gU$` changes to uppercase from here to the end of the line
-      - `guw` changes to lowercase from here to the beginning of next word
-      - `d3w` deletes from here to the beginnning of the third word
+     - `gU$` changes to uppercase from here to the end of the line
+     - `guw` changes to lowercase from here to the beginning of next word
+     - `d3w` deletes from here to the beginnning of the third word
 
    - `:hardcopy` sends file to printer... but format is not very good
    - `:retab` converts tabs to spaces
