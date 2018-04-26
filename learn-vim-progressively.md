@@ -170,6 +170,14 @@ Most commands can be used using the following general format:
 
      Note #2: Don't confuse `Ctrl-v` (Visual Block Mode) with `V` and `v` modes
 
+   To add something at the end of all visually selected lines:
+
+   - `Ctrl-v` -> gets into Visual Block Mode
+   - go to the desired line (with `j`, `Ctrl-d`, `/pattern`, etc)
+   - `$` -> go to the end of the line
+   - `A` + write text + `ESC`
+
+   A fabulous video about the Visual Block Mode can be found at [Vimcasts](http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/)
 
 4. Completion:
 
@@ -201,13 +209,6 @@ Most commands can be used using the following general format:
    - `<` -> indent to the left
    - `>` -> indent to the right
    - `=` -> autoindent
-
-   To add something at the end of all visually selected lines:
-
-   - `Ctrl-v` -> gets into Visual Block Mode
-   - go to the desired line (with `j`, `Ctrl-d`, `/pattern`, etc)
-   - `$` -> go to the end of the line
-   - `A` + write text + `ESC`
 
 7. Splits:
 
