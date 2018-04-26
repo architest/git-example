@@ -111,6 +111,8 @@ Most commands can be used using the following general format:
 
 # 4TH LEVEL:
 
+1. General:
+
 - `0` -> go to column 0 (zero)
 - `^` -> go to the first **NON-BLANK** character on this line
 - `$` -> to to the last column
