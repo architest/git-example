@@ -113,25 +113,25 @@ Most commands can be used using the following general format:
 
 1. General:
 
-- `0` -> go to column 0 (zero)
-- `^` -> go to the first **NON-BLANK** character on this line
-- `$` -> to to the last column
-- `g_` -> go to the last **NON-BLANK** character on this line
-- `fX` -> go to the next occurence of character 'X' on this line
+  - `0` -> go to column 0 (zero)
+  - `^` -> go to the first **NON-BLANK** character on this line
+  - `$` -> to to the last column
+  - `g_` -> go to the last **NON-BLANK** character on this line
+  - `fX` -> go to the next occurence of character 'X' on this line
 
-  For instance:
-  - `3fX` -> find the 3rd occurence of character 'X' in this line
+    For instance:
+    - `3fX` -> find the 3rd occurence of character 'X' in this line
 
-  - `F` -> like 'f', but backwards
-  - `,` -> find the **NEXT** occurrence
-  - `;` -> find the **PREVIOUS** occurrence
+    - `F` -> like 'f', but backwards
+    - `,` -> find the **NEXT** occurrence
+    - `;` -> find the **PREVIOUS** occurrence
 
-- `tX` -> go to just **BEFORE** the character 'X'
-  - `T` -> like 't', but backwards
-- `dtX` -> remove everything up to 'X', without including it
+  - `tX` -> go to just **BEFORE** the character 'X'
+    - `T` -> like 't', but backwards
+  - `dtX` -> remove everything up to 'X', without including it
 
 
-1. Zone selection:
+2. Zone selection:
 
   This follows the patterns:
 
@@ -150,7 +150,7 @@ Most commands can be used using the following general format:
   - `v2i)` -> will select `map (+) ("foo")`
   - `v2a)` -> will select `(map (+) ("foo"))`
 
-2. Rectangular blocks:
+3. Rectangular blocks:
 
   They are very useful for commenting many lines of code. For instance:
 
@@ -167,11 +167,11 @@ Most commands can be used using the following general format:
   Note #1: Instead of `I` we can use `i`, `A`, `a`, `c`, `r`, etc.
   Note #2: Don't confuse `Ctrl-v` (Visual Block Mode) with `V` and `v` modes
 
-3. Completion:
+4. Completion:
 
   - `Ctrl-p` -> call the autocompletion feature
 
-4. Macros:
+5. Macros:
 
   - `qa` -> records your actions in register 'a'
   - `@a` -> this will call the macro saved in register 'a'
@@ -188,7 +188,7 @@ Most commands can be used using the following general format:
   - `@@` -> writes 3 under 2
   - `100@@` -> writes increasing numbers up to 103
 
-5. Visual selection: `v`, `V` and `Ctrl-v`
+6. Visual selection: `v`, `V` and `Ctrl-v`
 
   Once the selection has been made:
 
@@ -204,7 +204,7 @@ Most commands can be used using the following general format:
   - `$` -> go to the end of the line
   - `A` + write text + `ESC`
 
-6. Splits:
+7. Splits:
 
   - `:split` -> create a (horizontal) split (shorthand: `:sp`)
   - `:vsplit` -> create a vertical split (shorthand: `:vs`)
@@ -214,7 +214,7 @@ Most commands can be used using the following general format:
   - `Ctrl-w +` -> Grow the split
   - `Ctrl-w -` -> Shrink the split
 
-7. The manuals:
+8. The manuals:
 
   - `:help usr_01.txt` -> Start the User Manual
   - `Ctrl-]` -> jumps to the subject under the cursor
