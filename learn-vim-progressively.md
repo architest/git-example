@@ -9,14 +9,14 @@ The following text is based on the tutorial **_Learn Vim Progressively_** that c
 
 Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get back to NORMAL mode just press the `ESC` key.
 
-    - `i` -> Go to INSERT mode
-    - `ESC` -> Back to NORMAL mode
-    - `x` -> Delete the character under the cursor
-    - `:wq` -> Save (`:w`) and Quit (`:q`)
-    - `dd` -> Delete (and copy to clipboard) the current line
-    - `p` -> Paste what is in clipboard
-    - `hjkl` -> Move Left, Down, Up, Right (`j` looks like a down arrow)
-    - `:help <command>` -> Show help about <command>. `:help` provides general help
+    + `i` -> Go to INSERT mode
+    + `ESC` -> Back to NORMAL mode
+    + `x` -> Delete the character under the cursor
+    + `:wq` -> Save (`:w`) and Quit (`:q`)
+    + `dd` -> Delete (and copy to clipboard) the current line
+    + `p` -> Paste what is in clipboard
+    + `hjkl` -> Move Left, Down, Up, Right (`j` looks like a down arrow)
+    + `:help <command>` -> Show help about <command>. `:help` provides general help
 
 
 ## 2ND LEVEL:
