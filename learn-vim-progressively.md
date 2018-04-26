@@ -109,7 +109,7 @@ Most commands can be used using the following general format:
   - `y2/foo` -> yank up to the second occurence of "foo"
 
 
-# 4TH LEVEL:
+## 4TH LEVEL:
 
 1. General:
 
