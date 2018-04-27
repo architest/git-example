@@ -124,8 +124,8 @@ Most commands can be used using the following general format:
      - `3fX` -> find the 3rd occurence of character 'X' in this line
 
      - `F` -> like 'f', but backwards
-     - `,` -> find the **NEXT** occurrence
-     - `;` -> find the **PREVIOUS** occurrence
+     - `;` -> find the **NEXT** occurrence
+     - `,` -> find the **PREVIOUS** occurrence
 
    - `tX` -> go to just **BEFORE** the character 'X'
      - `T` -> like 't', but backwards
