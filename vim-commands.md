@@ -146,6 +146,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `p` pastes buffer **BELOW** cursor line
    - `P` pastes buffer **ABOVE** cursor line
    - `xp` swaps two characters (`x` to delete one character, then `p` to put it back after the cursor position)
+   - `]p` pastes with auto-reindent
 
 
 ## Blocks
