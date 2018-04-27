@@ -90,6 +90,9 @@ This information is partially taken from [here](https://stackoverflow.com/questi
       - `zz` puts current line in the center of the screen
       - `zt` puts current line at the top of the screen
       - `zb` puts current line at the bottom of the screen
+      - `H` puts the cursor to the **H**ighest line of the screen
+      - `M` puts the cursor to the **M**iddle line of the screen
+      - `L` puts the cursor to the **L**ower line of the screen
 
 
 ## Editing
