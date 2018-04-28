@@ -61,7 +61,7 @@ git commit -m "Created .gitignore"
 git log
 ```
 
-9. You made a change in `.gitignore`, but then changed your mind and **dropped it**. This instruction changes file back to where it was at last commit
+9. You made a change in `.gitignore`, but then changed your mind and **dropped it**. This instruction changes the file back to where it was at last commit
 ```
 vim .gitignore
 git checkout -- .gitignore
@@ -102,18 +102,21 @@ git checkout -b my_new_feature
 git branch
 ```
 
-4. Back to the top of the main branch (**_master_**)
+4. Back to the top of the main branch (**_master_**), and confirm we are indeed there
 ```
 git checkout master
+git branch
 ```
 
-5. Change back to the new branch
+5. Change back to the new branch. Confirm we are where we want
 ```
 git checkout my_new_feature
+git branch
 ```
 
-6. We are inside the NEW `my_new_feature` branch, so further changes will go in there
+6. We are inside the **NEW** `my_new_feature` branch, so further changes will go in there
 ```
+vim hello.py
 git add hello.py
 git commit -m "Added code for feature x"
 ```
@@ -167,11 +170,13 @@ git commit -m "Renaming file"
 2. Removing files (wildcards are also valid)
 ```
 git rm <target-file>
+git commit -m "Removed target file"
 ```
 
 3. Removing directories
 ```
 git rm -r folder_of_cats
+git commit -m "Removed directory 'folder_of_cats'"
 ```
 
 4. Set user email and name _for every repository_ in your computer
@@ -200,7 +205,7 @@ git config user.name "User Surname"
 
 ## Handling remote repositories
 
-1. Download a full repository
+1. Download (_clone_) a full repository
 ```
 git clone https://github.com/jima80525/github-playground.git
 ```
