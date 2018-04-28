@@ -25,6 +25,7 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 
     - `i` -> insert **IN** the cursor
     - `a` -> insert **AFTER** the cursor
+    - `I` -> insert at the **BEGINNING** of the current line
     - `o` -> insert a new line **AFTER** the current one
     - `O` -> insert a new line **BEFORE** the curren one
     - `cw` -> replace from the cursor to the end of the word
@@ -52,7 +53,7 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 
     - `:e <path/to/file>` -> open _path/to/file_
     - `:w` -> save
-    - `:saveas <path/to/file>` -> save to <path/to/file_
+    - `:saveas <path/to/file>` -> save to _path/to/file_
     - `:wq`, `:x` or `ZZ` -> save and quit (`:x` only save if necessary)
     - `:q!` -> quit without saving
     - `:qa!` -> quit without saving even if there are modified hidden buffers
@@ -115,10 +116,6 @@ Most commands can be used using the following general format:
 
 1. General:
 
-   - `0` -> go to column 0 (zero)
-   - `^` -> go to the first **NON-BLANK** character on this line
-   - `$` -> to to the last column
-   - `g_` -> go to the last **NON-BLANK** character on this line
    - `fX` -> go to the next occurence of character _X_ on this line
 
      For instance:
