@@ -9,21 +9,22 @@ The following text is based on the tutorial **_Learn Vim Progressively_** that c
 
 Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get back to NORMAL mode just press the `ESC` key.
 
-- `i` -> Go to INSERT mode
-- `ESC` -> Back to NORMAL mode
+- `i` -> Go to **INSERT** mode. Inserts in the place where the cursor is
+- `ESC` -> Back to **NORMAL** mode
 - `x` -> Delete the character under the cursor
 - `:wq` -> Save (`:w`) and Quit (`:q`)
 - `dd` -> Delete (and copy to clipboard) the current line
 - `p` -> Paste what is in clipboard
 - `hjkl` -> Move Left, Down, Up, Right (`j` looks like a down arrow)
-- `:help <command>` -> Show help about <command>. `:help` provides general help
+- `:help <command>` -> Show help about _command_. `:help` provides general help
 
 
 ## 2ND LEVEL:
 
 1. Insert mode variations:
 
-    - `a` -> insert after cursor
+    - `i` -> insert **IN** the cursor
+    - `a` -> insert **AFTER** the cursor
     - `o` -> insert a new line **AFTER** the current one
     - `O` -> insert a new line **BEFORE** the curren one
     - `cw` -> replace from the cursor to the end of the word
@@ -34,7 +35,7 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
     - `^` -> go to the first **NON-BLANK** character of the line
     - `$` -> go to the end of the line
     - `g_` -> go to the last **NON-BLANK** character of the line
-    - `/pattern` -> search for 'pattern'
+    - `/pattern` -> search for _pattern_
 
 3. Copy/Paste:
 
@@ -49,9 +50,9 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 
 5. Load/Save/Quit/Change File (Buffer):
 
-    - `:e <path/to/file>` -> open <path/to/file>
+    - `:e <path/to/file>` -> open _path/to/file_
     - `:w` -> save
-    - `:saveas <path/to/file>` -> save to <path/to/file>
+    - `:saveas <path/to/file>` -> save to <path/to/file_
     - `:wq`, `:x` or `ZZ` -> save and quit (`:x` only save if necessary)
     - `:q!` -> quit without saving
     - `:qa!` -> quit without saving even if there are modified hidden buffers
@@ -62,17 +63,17 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 ## 3RD LEVEL:
 
 - `.` -> (dot) will repeat the last command
-- `N<command>` will repeat <command> 'N' times
+- `N<command>` will repeat <command> _N_ times
 
   For example:
 
-  - `100idesu [ESC]` -> will write "desu " 100 times
-  - `.` (dot) -> just after last command will write again 100 times "desu "
-  - `3.` -> will write 3 times "desu " (and not 300 times)
+  - `100idesu [ESC]` -> will write "_desu_ " 100 times
+  - `.` (dot) -> just after last command will write again 100 times "_desu_ "
+  - `3.` -> will write 3 times "_desu_ " (and not 300 times)
 
-- `NG` -> go to line 'N'
-- `gg` -> go to start of file (shortcut for `1G`)
-- `G` -> go to last line
+- `NG` -> go to line _N_
+- `gg` -> go to **start of file** (shortcut for `1G`)
+- `G` -> go to **last** line of file
 
 Mind that '**words**' are composed of letters and underscore character, while '**WORDS**' are a group of characters separated by blank characteres. Thence, in the following string:
 
@@ -82,19 +83,19 @@ Mind that '**words**' are composed of letters and underscore character, while '*
 
 the first '**word**' is `name_1`, while the first '**WORD**' is `(name_1,vision_3);`
 
-- `w` -> go to the start of the following 'word'
-- `W` -> go to the start of the following 'WORD'
-- `e` -> go to the end of this 'word'
-- `E` -> go to the end of this 'WORD'
+- `w` -> go to the **START** of the following '**word**'
+- `W` -> go to the **START** of the following '**WORD**'
+- `e` -> go to the **END** of this '**word**'
+- `E` -> go to the **END** of this '**WORD**'
 
 - `%` -> go to the correspondig (, {, [
-- `*` -> go to the NEXT occurence of the word under the cursor
-- `#` -> go to the PREVIOUS occurence of the word under the cursor
+- `*` -> go to the **NEXT** occurence of the word under the cursor
+- `#` -> go to the **PREVIOUS** occurence of the word under the cursor
 
 Most commands can be used using the following general format:
 
 ```
-    <START position><COMMAND><END position>
+    <START-position><COMMAND><END-position>
 ```
 
   For example, `0y$` means:
@@ -106,7 +107,7 @@ Most commands can be used using the following general format:
   Other examples are:
 
   - `ye` -> yank to the end of this word
-  - `y2/foo` -> yank up to the second occurence of "foo"
+  - `y2/foo` -> yank up to the second occurence of _foo_
 
 
 ## 4TH LEVEL:
@@ -118,18 +119,18 @@ Most commands can be used using the following general format:
    - `^` -> go to the first **NON-BLANK** character on this line
    - `$` -> to to the last column
    - `g_` -> go to the last **NON-BLANK** character on this line
-   - `fX` -> go to the next occurence of character 'X' on this line
+   - `fX` -> go to the next occurence of character _X_ on this line
 
      For instance:
-     - `3fX` -> find the 3rd occurence of character 'X' in this line
+     - `3fX` -> find the 3rd occurence of character _X_ in this line
 
-     - `F` -> like 'f', but backwards
+     - `F` -> like `f`, but backwards
      - `;` -> find the **NEXT** occurrence
      - `,` -> find the **PREVIOUS** occurrence
 
-   - `tX` -> go to just **BEFORE** the character 'X'
-     - `T` -> like 't', but backwards
-   - `dtX` -> remove everything up to 'X', without including it
+   - `tX` -> go to just **BEFORE** the character _X_
+     - `T` -> like `t`, but backwards
+   - `dtX` -> remove everything up to _X_, without including it
 
 
 2. Zone selection:
@@ -137,12 +138,12 @@ Most commands can be used using the following general format:
    This follows the patterns:
 
 ```
-    <action>a<object> and <action>i<object>
+    <action>a<object>  and  <action>i<object>
 ```
 
-   Where action can be `d` (delete), `y` (yank), `v` (select in visual mode),etc. The object can be: w (word), W (WORD), s (sentence), p (paragraph), but also natural characters like ", ', ), }, ].
+   Where action can be `d` (delete), `y` (yank), `v` (select in visual mode),etc. The object can be: w (**word**), W (**WORD**), s (sentence), p (paragraph), but also natural characters like `"`, `'`, `)`, `}`, `]`.
 
-   Suppose the cursor is on the first 'o' of `(map (+) ("foo"))`:
+   Let's suppose the cursor is on the first 'o' of `(map (+) ("foo"))`:
 
    - `vi"` -> will select `foo`
    - `va"` -> will select `"foo"`
@@ -162,7 +163,7 @@ Most commands can be used using the following general format:
 
    - `^` -> go to the first non-blank character of the line
    - `Ctrl-v` -> start of block selection (_ATTENTION!_, it is **_CTRL_**!!!)
-   - `Ctrl-d` -> move down (could also be jjj, %, etc.)
+   - `Ctrl-d` -> move down (could also be `jjj`, `%`, etc.)
    - `I-- [ESC][ESC]` -> write `-- ` to comment each line
    - `o` -> in Visual Block Mode, toggles selection cursor to **OPPOSITE** corner
 
@@ -177,7 +178,7 @@ Most commands can be used using the following general format:
    - `$` -> go to the end of the line
    - `A` + write text + `ESC`
 
-   A fabulous video about the Visual Block Mode can be found at [Vimcasts](http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/)
+   A fabulous video about the Visual Block Mode can be found at [Vimcasts](http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/).
 
 4. Completion:
 
@@ -186,8 +187,8 @@ Most commands can be used using the following general format:
 
 5. Macros:
 
-   - `qa` -> records your actions in register 'a'
-   - `@a` -> this will call the macro saved in register 'a'
+   - `qa` -> records your actions in register '_a_'
+   - `@a` -> this will call the macro saved in register '_a_'
    - `@@` -> calls the last executed macro
 
    Example: On a line containing only the number 1, type:
@@ -214,7 +215,7 @@ Most commands can be used using the following general format:
 
    - `:split` -> create a (horizontal) split (shorthand: `:sp`)
    - `:vsplit` -> create a vertical split (shorthand: `:vs`)
-   - `Ctrl-w <direction>` -> (where <direction> is `hjkl`) to change split
+   - `Ctrl-w <direction>` -> (where _direction_ is `hjkl`) to change split
    - `Ctrl-w_` -> Maximise the size of the (horizontal) split
    - `Ctrl-w |` -> Maximise the size of the vertical split
    - `Ctrl-w +` -> Grow the split
