@@ -18,6 +18,8 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
 - `hjkl` -> Move Left, Down, Up, Right (`j` looks like a down arrow)
 - `:help <command>` -> Show help about _command_. `:help` provides general help
 
+Note: The key for productivity in Vim is to stay most of the time in **NORMAL** mode, and use from there all the available commands to modify text and move around.
+
 
 ## 2ND LEVEL:
 

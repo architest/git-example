@@ -18,6 +18,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `Esc` gets you out of any mode and back to command mode
    - Commands preceded by `:` are executed on the command line at the bottom of the screen
    - `:help` helps with any command
+   - Note: The key for productivity in Vim is to stay most of the time in **NORMAL** mode, and use from there all the available commands to modify text and move around.
 
 
 ## Navigation
