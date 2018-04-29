@@ -26,15 +26,16 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
     - `i` -> insert **IN** the cursor
     - `a` -> insert **AFTER** the cursor
     - `I` -> insert at the **BEGINNING** of the current line
+    - `A` -> insert at the **END** of the current line
     - `o` -> insert a new line **AFTER** the current one
     - `O` -> insert a new line **BEFORE** the curren one
     - `cw` -> replace from the cursor to the end of the word
 
 2. Basic moves:
 
-    - `0` -> (Zero) go to the first column
-    - `^` -> go to the first **NON-BLANK** character of the line
+    - `0` -> (Zero) go to the first column of the line
     - `$` -> go to the end of the line
+    - `^` -> go to the first **NON-BLANK** character of the line
     - `g_` -> go to the last **NON-BLANK** character of the line
     - `/pattern` -> search for _pattern_
 
@@ -57,20 +58,22 @@ Vim starts by default in NORMAL mode. Use `i` to change to INSERT mode. To get b
     - `:wq`, `:x` or `ZZ` -> save and quit (`:x` only save if necessary)
     - `:q!` -> quit without saving
     - `:qa!` -> quit without saving even if there are modified hidden buffers
+    - `:ls` -> show all the files (buffers) currently opened
     - `:bn` -> show **NEXT** file (buffer)
     - `:bp` -> show **PREVIOUS** file (buffer)
+    - `:bd` -> close current buffer and delete it from buffer list
 
 
 ## 3RD LEVEL:
 
 - `.` -> (dot) will repeat the last command
-- `N<command>` will repeat <command> _N_ times
+- `N<command>` will repeat _command_ _N_ times
 
   For example:
 
   - `100idesu [ESC]` -> will write "_desu_ " 100 times
-  - `.` (dot) -> just after last command will write again 100 times "_desu_ "
-  - `3.` -> will write 3 times "_desu_ " (and not 300 times)
+  - `.` (dot) -> just after last command will write again "_desu_ " 100 times
+  - `3.` -> will write "_desu_ " 3 times (and not 300 times)
 
 - `NG` -> go to line _N_
 - `gg` -> go to **start of file** (shortcut for `1G`)
@@ -85,11 +88,11 @@ Mind that '**words**' are composed of letters and underscore character, while '*
 the first '**word**' is `name_1`, while the first '**WORD**' is `(name_1,vision_3);`
 
 - `w` -> go to the **START** of the following '**word**'
-- `W` -> go to the **START** of the following '**WORD**'
 - `e` -> go to the **END** of this '**word**'
+- `W` -> go to the **START** of the following '**WORD**'
 - `E` -> go to the **END** of this '**WORD**'
 
-- `%` -> go to the correspondig (, {, [
+- `%` -> go to the correspondig *(*, *{*, *[*
 - `*` -> go to the **NEXT** occurence of the word under the cursor
 - `#` -> go to the **PREVIOUS** occurence of the word under the cursor
 
@@ -127,7 +130,7 @@ Most commands can be used using the following general format:
 
    - `tX` -> go to just **BEFORE** the character _X_
      - `T` -> like `t`, but backwards
-   - `dtX` -> remove everything up to _X_, without including it
+   - `dtX` -> remove everything up to _X_, without including _X_
 
 
 2. Zone selection:
@@ -161,7 +164,7 @@ Most commands can be used using the following general format:
    - `^` -> go to the first non-blank character of the line
    - `Ctrl-v` -> start of block selection (_ATTENTION!_, it is **_CTRL_**!!!)
    - `Ctrl-d` -> move down (could also be `jjj`, `%`, etc.)
-   - `I-- [ESC][ESC]` -> write `-- ` to comment each line
+   - `I-- [ESC][ESC]` -> insert `-- ` at the beginning of each line
    - `o` -> in Visual Block Mode, toggles selection cursor to **OPPOSITE** corner
 
      Note #1: Instead of `I` we can use `i`, `A`, `a`, `c`, `r`, etc.
@@ -173,7 +176,7 @@ Most commands can be used using the following general format:
    - `Ctrl-v` -> gets into Visual Block Mode
    - go to the desired line (with `j`, `Ctrl-d`, `/pattern`, etc)
    - `$` -> go to the end of the line
-   - `A` + write text + `ESC`
+   - `A` + _write new text_ + `ESC`
 
    A fabulous video about the Visual Block Mode can be found at [Vimcasts](http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/).
 
