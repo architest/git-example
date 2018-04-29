@@ -249,6 +249,9 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
 ## Other:
 
+   - `qa` -> records your actions in register '_a_'
+   - `@a` -> this will call the macro saved in register '_a_'
+   - `@@` -> calls the last executed macro
    - `Ctrl-j` window down
    - `Ctrl-k` window up
    - `Ctrl-l` window right
