@@ -174,6 +174,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `:bX` changes to buffer number _X_
    - `:bn` shows next file (buffer)
    - `:bp` shows previous file (buffer)
+   - `:bd` close current buffer and delete it from buffer list
 
 
 ## Global
