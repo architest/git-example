@@ -14,11 +14,15 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
 ## General
 
-   - Nearly all commands can be preceded by a number for a repeat count. eg. `5dd` deletes 5 lines
+   - Nearly all commands can be preceded by a number for a repeat count. eg.
+     `5dd` deletes 5 lines
    - `Esc` gets you out of any mode and back to command mode
-   - Commands preceded by `:` are executed on the command line at the bottom of the screen
+   - Commands preceded by `:` are executed on the command line at the bottom of
+     the screen
    - `:help` helps with any command
-   - Note: The key for productivity in Vim is to stay most of the time in **NORMAL** mode, and use from there all the available commands to modify text and move around.
+   - Note: The key for productivity in Vim is to stay most of the time in
+     **NORMAL** mode, and use from there all the available commands to modify
+     text and move around.
 
 
 ## Navigation
@@ -27,7 +31,9 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
    - By words:
 
-     NOTE: '**words**' are letters and the underscore character, while '**WORDS**' are characters separated by blanks. For instance, in the following line:
+     NOTE: '**words**' are letters and the underscore character, while
+     '**WORDS**' are characters separated by blanks. For instance, in the
+     following line:
 
 ```
       (name_1,vision_3; # this is a comment.
@@ -101,7 +107,8 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `u` undo
    - `^R` redo
    - `.` repeats last editing command
-   - `N<command>`  repeats <command> _N_ times (p.e. `100idesu [ESC]` inserts 'desu ' 100 times
+   - `N<command>`  repeats <command> _N_ times (p.e. `100idesu [ESC]` inserts
+     'desu ' 100 times
    - `N.` repeats last editing command _N_ times
 
 
@@ -119,7 +126,8 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
 ## Changing
 
-   All change commands except `r` and `R` are terminated with `Esc` to return to command mode.
+   All change commands except `r` and `R` are terminated with `Esc` to return
+   to command mode.
 
    - `r` replaces single character
    - `R` replaces multiple characters
@@ -128,7 +136,8 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `C` changes to end of line
    - `cc` changes whole line
    - `c<motion>` changes text in the direction of the motion
-   - `ci(` changes inside parentheses (see text object selection for more examples)
+   - `ci(` changes inside parentheses (see text object selection for more
+      examples)
 
 
 ## Deleting
@@ -146,7 +155,8 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `dd` cuts line into paste buffer
    - `p` pastes buffer **BELOW** cursor line
    - `P` pastes buffer **ABOVE** cursor line
-   - `xp` swaps two characters (`x` to delete one character, then `p` to put it back after the cursor position)
+   - `xp` swaps two characters (`x` to delete one character, then `p` to put it
+      back after the cursor position)
    - `]p` pastes with auto-reindent
 
 
@@ -179,9 +189,12 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
 ## Global
 
-   - `:%s/foo/bar/g` substitutes all occurrences of "_foo_" to "_bar_" **IN WHOLE FILE**
-   - `:%s/foo/bar/gc` substitutes all occurrences of "_foo_" to "_bar_" **IN WHOLE FILE**, with a prompt whether to substitute or not.
-   - `:#,#s/old/new/g` where **_#,#_** are the line numbers of the range of lines where the substitution is to be done.
+   - `:%s/foo/bar/g` substitutes all occurrences of "_foo_" to "_bar_" **IN
+      WHOLE FILE**
+   - `:%s/foo/bar/gc` substitutes all occurrences of "_foo_" to "_bar_" **IN
+      WHOLE FILE**, with a prompt whether to substitute or not.
+   - `:#,#s/old/new/g` where **_#,#_** are the line numbers of the range of
+      lines where the substitution is to be done.
    - `%` is a range that indicates every line in the file
    - `/g` is a flag that changes all occurrences on a line instead of just the first one
 
@@ -240,11 +253,13 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 
 ## Source Navigation
 
-   - `%` jumps to matching parenthesis/bracket/brace, or language block if language module loaded
+   - `%` jumps to matching parenthesis/bracket/brace, or language block if
+      language module loaded
    - `gd` goes to definition of local symbol under cursor
    - `Ctrl-O` returns to previous position
    - `Ctrl-]` jumps to definition of global symbol (requires tags file)
-   - `Ctrl-T` returns to previous position (arbitrary stack of positions maintained)
+   - `Ctrl-T` returns to previous position (arbitrary stack of positions
+      maintained)
    - `Ctrl-N` (in insert mode) automatic word completion
 
 
@@ -267,7 +282,8 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `:!<command>` executes an external command
    - `:help <topic>` provides help about _topic_
    - `Ctrl-W Ctrl-W` jumps between windows
-   - In command mode (`:e`), `Ctrl-D` shows a list of commands that start with "e"
+   - In command mode (`:e`), `Ctrl-D` shows a list of commands that start with
+     "e"
    - Most commands can be used with the following general format:
 
 ```
@@ -294,9 +310,16 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `:retab` converts tabs to spaces
    - `:shell` launches a shell console from Vim
    - `Ctrl-d` comes back from the console to Vim
+   - `:colorscheme emacs` changes the color scheme to _emacs_
+   - `<F8>/Shift-<F8>` changes to next/previous color scheme (`setcolors`
+      plugin)
+   - `SetColors [all|my|blues slate ron|emacs]` displays current scheme names
+      or sets scheme names to specific list (`setcolors` plugin)
 
 
 ## Show local changes
 
-Vim has some features that make it easy to highlight lines that have been changed from a base version in source control. Greg Hewgill has created a small Vim script that [makes this easy](http://github.com/ghewgill/vim-scmdiff).
+Vim has some features that make it easy to highlight lines that have been
+changed from a base version in source control. Greg Hewgill has created a small
+Vim script that [makes this easy](http://github.com/ghewgill/vim-scmdiff).
 
