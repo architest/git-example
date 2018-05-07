@@ -222,7 +222,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
 ## Files
 
    - `:w` writes file to disk
-   - `:w <name>` writes file to disk as _name_
+   - `:w <filename>` writes file to disk as _filename_
    - `:x` writes file to disk and quit (only save if necessary)
    - `ZZ` writes file to disk and quit
    - `:n` edits a new file
@@ -233,7 +233,6 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `:e` edits same file again (if changed outside Vim)
    - `:e .` directory explorer
    - `:e <FILENAME>` opens _FILENAME_
-   - `:w <FILENAME>` writes the current Vim file to disk with name _FILENAME_
    - `:saveas <path/to/file>` saves to _path/to/file_
    - `v <motion> :w FILENAME`  saves the visually selected lines to _FILENAME_
    - `:r FILENAME` retrieves _FILENAME_ and puts it below the cursor position
