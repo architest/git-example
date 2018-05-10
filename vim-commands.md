@@ -225,7 +225,7 @@ This information is partially taken from [here](https://stackoverflow.com/questi
    - `:w <filename>` writes file to disk as _filename_
    - `:x` writes file to disk and quit (only save if necessary)
    - `ZZ` writes file to disk and quit
-   - `:n` edits a new file
+   - `:enew` opens a new buffer to edit a new file
    - `:n!` edits a new file without saving current changes
    - `:q` quits editing a file
    - `:q!` quits editing without saving changes
