@@ -21,10 +21,12 @@ current file:
 ```
 :Git checkout %
 :Gread
-
+```
+```
 :Git rm %
 :Gremove
-
+```
+```
 :Git mv %
 :Gmove
 ```
