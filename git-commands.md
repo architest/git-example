@@ -234,10 +234,43 @@ git push -u origin master
 ```
 git pull origin master
 ```
+'Pulling' can be seen as the combination of two commands: `git fetch`, which fetches down all the changes on the server that we don't have yet, but doesn't modify the working directory, and `git merge`, which combines remote and local data.
 
 7. Add a remote repository to push our local repo to the GitHub server (i.e.: We created our repository from scratch, and we are setting `origin` in order to be able to _push it_ to a remote server)
 ```
 git remote add origin https://github.com/try-git/try_git.git
+```
+
+8. In order to make a _tracking branch_, i.e., a local branch that automatically tracks a remote branch, we can do:
+```
+git checkout -b serverfix origin/serverfix
+```
+In this way, the local _serverfix_ branch tracks the remote _serverfix_ branch in _origin_. A shorthand for the former operation is:
+```
+git checkout --track origin/serverfix
+```
+If the local branch doesn't exist, and you know the (unique) name of the branch in the remote, we can even do:
+```
+git checkout serverfix
+```
+If one wants to use a different name for the local branch(_myfix_ in this example):
+```
+git checkout -b myfix origin/serverfix
+```
+In order to see which tracking branches have been setup, we use the `-vv` option with `git branch`:
+
+```shell
+git branch -vv
+  iss53     7e424c3 [origin/iss53: ahead 2] forgot the brackets
+  master    1ae2a45 [origin/master] deploying index fix
+* serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it
+  testing   5ea463a trying something new
+```
+
+Or, even better, to get completely up-to-date numbers from all tracked remotes:
+```
+git fetch -all
+git branch -vv
 ```
 
 ## Configure Git to sync your fork with the original repository
