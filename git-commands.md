@@ -61,13 +61,18 @@ git commit -m "Created .gitignore"
 git log
 ```
 
-9. You made a change in `.gitignore`, but then changed your mind and **dropped it**. This instruction changes the file back to where it was at last commit
+9. The command `git log` provides, besides the commit messages of the changes, the **_SHA_** ID of every commit. Then, one can use the command `git show SHA` to get a detailed description of the changes related to that commit:
+```
+git show fcf22e5d3cf1c
+```
+
+10. You made a change in `.gitignore`, but then changed your mind and **dropped it**. This instruction changes the file back to where it was at last commit
 ```
 vim .gitignore
 git checkout -- .gitignore
 ```
 
-10. You decided to apply and commit other change
+11. You decided to apply and commit other change
 ```
 vim .gitignore
 git status
@@ -75,12 +80,12 @@ git add .gitignore
 git commit -m "Modifying .gitignore to exclude all .pyc files"
 ```
 
-11. Take a look at what is different from our last commit. In this case we want the diff of our most recent commit, and we can refer to it using **_HEAD_**
+12. Take a look at what is different from our last commit. In this case we want the diff of our most recent commit, and we can refer to it using **_HEAD_**
 ```
 git diff HEAD
 ```
 
-12. We can unstage files by using the `git reset` command
+13. We can unstage files by using the `git reset` command
 ```
 git reset octofamily/octodog.txt
 ```
