@@ -84,6 +84,10 @@ git commit -m "Modifying .gitignore to exclude all .pyc files"
 ```
 git diff HEAD
 ```
+If what we want to check is whether we are about to commit a file with whitespace errors, let's use:
+```
+git diff --check
+```
 
 13. We can unstage files by using the `git reset` command
 ```
