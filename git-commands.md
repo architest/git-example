@@ -266,16 +266,15 @@ If one wants to use a different name for the local branch (_myfix_ in this examp
 ```
 git checkout -b myfix origin/serverfix
 ```
-In order to see which tracking branches have been setup, we use the `-vv` option with `git branch`:
 
-```shell
-git branch -vv
-  iss53     7e424c3 [origin/iss53: ahead 2] forgot the brackets
-  master    1ae2a45 [origin/master] deploying index fix
-* serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it
-  testing   5ea463a trying something new
+9. In order to see which tracking branches have been setup, we use the `-vv` option with `git branch`:
 ```
-
+ git branch -vv
+        iss53     7e424c3 [origin/iss53: ahead 2] forgot the brackets
+        master    1ae2a45 [origin/master] deploying index fix
+      * serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it
+        testing   5ea463a trying something new
+```
 Or, even better, to get completely up-to-date numbers from all tracked remotes:
 ```
 git fetch -all
