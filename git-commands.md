@@ -262,7 +262,7 @@ If the local branch doesn't exist, and you know the (unique) name of the branch 
 ```
 git checkout serverfix
 ```
-If one wants to use a different name for the local branch(_myfix_ in this example):
+If one wants to use a different name for the local branch (_myfix_ in this example):
 ```
 git checkout -b myfix origin/serverfix
 ```
