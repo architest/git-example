@@ -126,6 +126,29 @@ git checkout <deleting_commit>^ -- <file_path>
 git reset --hard <revision>
 ```
 
+## Compare files between different commits
+
+1. The `git-diff` man page states:
+```
+git diff [--options] <commit> <commit> [--] [<path>...]
+```
+For instance, to see the difference for a file `main.c` between now and two commits back, here are three equivalent commands:
+```
+git diff HEAD^^ HEAD main.c
+git diff HEAD^^..HEAD -- main.c
+git diff HEAD~2 HEAD -- main.c
+```
+
+2. You can also use `git log` or `gitk` to find the **SHA1s** to use, in case the commits are very far appart. And you can use this approach to compare whole commits, not only one file:
+```
+git diff (sha-id-one) (sha-id-two)
+```
+
+3. You can also compare two different files in two different revisions, like this:
+```
+git diff <revision_1>:<file_1> <revision_2>:<file_2>
+```
+
 ## Handling branches
 
 1. To see all branches
