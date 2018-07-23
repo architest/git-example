@@ -116,7 +116,7 @@ Find the last commit that affected the given path. As the file isn't in the HEAD
 ```
 git rev-list -n 1 HEAD -- <file_path>
 ```
-Then checkout the version at the commit before, using the caret (**^**) symbol:
+Then, with the output provided by the former command (a SHA1 string), checkout the version at the commit **_before_**, using the caret (**_^_**) symbol:
 ```
 git checkout <deleting_commit>^ -- <file_path>
 ```
