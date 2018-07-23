@@ -126,6 +126,11 @@ git checkout <deleting_commit>^ -- <file_path>
 git reset --hard <revision>
 ```
 
+5. It is possible to use the following command to get all the commits which have deleted files and the files deleted:
+```
+git log --diff-filter=D --summary
+```
+
 ## Compare files between different commits
 
 1. The `git-diff` man page states:
