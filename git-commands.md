@@ -94,6 +94,38 @@ git diff --check
 git reset octofamily/octodog.txt
 ```
 
+## Recover files or folders accidentaly deleted
+
+1. Files are deleted from working tree but not commited yet:
+```
+git checkout -- path/to/folder
+```
+If deletion was already indexed, it must be reset first:
+```
+git reset -- path/to/folder
+git checkout -- path/to/folder
+```
+
+2. Restore the full working tree, but lose all uncommitted changes:
+```
+git reset --hard HEAD
+```
+
+3. When files are deleted in some commit in the past:
+Find the last commit that affected the given path. As the file isn't in the HEAD commit, this commit must have deleted it.
+```
+git rev-list -n 1 HEAD -- <file_path>
+```
+Then checkout the version at the commit before, using the caret (**^**) symbol:
+```
+git checkout <deleting_commit>^ -- <file_path>
+```
+
+4. Restore the full working tree from a distant commit:
+```
+git reset --hard <revision>
+```
+
 ## Handling branches
 
 1. To see all branches
