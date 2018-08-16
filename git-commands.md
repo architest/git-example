@@ -679,7 +679,7 @@ git reset --hard HEAD^
 ```
 Here is not only the last commit gone, but the affected files have been deleted from the working directory, also. The ``--hard`` option resets you completely back to the SHA you specified.
 
-5. The `git revert` command allows you to easily remove the changes from a given commit but does not change the history.
+5. The `git revert` command allows you to easily remove the changes from a given commit **_but does not change the history_**, it only adds a new entry in the log.
 ```
 git revert HEAD
 ```
