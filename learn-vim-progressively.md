@@ -132,7 +132,7 @@ Most commands can be used using the following general format:
 
    - `tX` -> go to just **BEFORE** the character _X_
      - `T` -> like `t`, but backwards
-   - `dtX` -> remove everything up to _X_, without including _X_
+   - `dtX` -> remove everything up to **X**, _without including X_
 
 
 2. Zone selection:
