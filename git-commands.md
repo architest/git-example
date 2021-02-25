@@ -475,6 +475,7 @@ git stash pop
 **NOTE**: This section is adapted from [Advanced Git Tips for Python Developers](https://realpython.com/advanced-git-for-pythonistas/).
 
 1. The command `git diff` by default shows the changes (in _patch_ format) in your working directory that are **not** in your index or in HEAD:
+
 ```
 $ echo "I'm editing file3 now" >> file3
 $ git diff
@@ -495,6 +496,7 @@ $ git diff
 ```
 
 3. In order to see the changes that are in the index and staged for the next commit, use the `--staged` option:
+
 ```
 $ git diff --staged
 diff --git a/file3 b/file3
@@ -509,6 +511,7 @@ index faf2282..c5dd702 100644
 ```
 
 4. `diff` can be used to compare any two commits in the repo. For instance, if you have the SHAs:
+
 ```
 $ git diff b3e9b4d 387dcfc
 diff --git a/file3 b/file3
@@ -547,6 +550,7 @@ index 0000000..faf2282
 ```
 
 5. It is possible to restrict the diffs to a single file using the `--` option:
+
 ```
 $ git diff HEAD~3 HEAD
 diff --git a/file1 b/file1
@@ -588,6 +592,7 @@ index faf2282..c5dd702 100644
 ```
 
 6. In order to show the files changed in the most recent commit on _master_, we can compare **HEAD** with **HEAD^**:
+
 ```
 $ git diff HEAD^ HEAD
 diff --git a/file1 b/file1
