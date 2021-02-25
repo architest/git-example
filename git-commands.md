@@ -427,7 +427,7 @@ git stash pop
 git stash pop --index
 ```
 
-5. If you havemore than one stash, then the following instruction comes handy:
+5. If you have more than one stash, then the following instruction comes handy:
 ```
 git stash list
 ```
